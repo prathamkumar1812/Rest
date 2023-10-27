@@ -7,7 +7,7 @@ const app = express();
 app.get("/", (req, res) => {
     res.send("Hello World");
 });
-//app.use("/app/products", require("./routes/product.js"));
+app.use("/app/products", require("./routes/product.js"));
 
-//connectDb();
+connectDb();
 app.listen(PORT, () => console.log(`Server started at port : ${PORT}`));
